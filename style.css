@@ -379,10 +379,6 @@ section {
   gap: 0.8rem;
   min-height: 70px;
   padding: 0.8rem;
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 0.8rem;
-  background: white;
-  box-sizing: border-box;
 }
 
 .experience-details-container .article-container {
@@ -529,5 +525,6 @@ footer p {
 #certificates .details-container {
   text-align: center;
 }
+
 
 

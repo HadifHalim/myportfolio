@@ -296,6 +296,7 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  align-items: stretch;
 }
 
 .about-details-container {
@@ -306,6 +307,10 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
+}
+
+.about-containers .details-container {
+  flex: 1;
 }
 
 .about-pic {
@@ -345,6 +350,16 @@ section {
   position: relative;
 }
 
+#experience .details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#experience .details-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
@@ -359,10 +374,47 @@ section {
 }
 
 .experience-details-container article {
-  min-height: 80px; /* Adjust as needed */
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  gap: 0.8rem;
+  min-height: 70px;
+  padding: 0.8rem;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 0.8rem;
+  background: white;
+  box-sizing: border-box;
+}
+
+.experience-details-container .article-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: stretch;
+}
+
+.experience-details-container article .icon {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.experience-details-container article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.experience-details-container article h3 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.experience-details-container article p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.2;
 }
 
 .article-container {
@@ -477,4 +529,5 @@ footer p {
 #certificates .details-container {
   text-align: center;
 }
+
 

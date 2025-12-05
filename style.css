@@ -358,6 +358,13 @@ section {
   flex-direction: column;
 }
 
+.experience-details-container article {
+  min-height: 80px; /* Adjust as needed */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .article-container {
   display: flex;
   text-align: initial;
@@ -470,3 +477,4 @@ footer p {
 #certificates .details-container {
   text-align: center;
 }
+

@@ -160,7 +160,8 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  /* Change this margin to make the content wider */
+  margin: 0 5%; /* Alternatively, try: margin: 0 4rem; */
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -309,7 +310,7 @@ section {
 }
 
 .about-pic {
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .arrow {
@@ -322,7 +323,7 @@ section {
   padding: 1.5rem;
   flex: 1;
   background: white;
-  border-radius: 2rem;
+  border-radius: 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   text-align: center;
 }
@@ -374,7 +375,7 @@ article {
   min-height: 70px;
   padding: 0.8rem;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   background: white;
   box-sizing: border-box;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -397,8 +398,6 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
 }
 
 .project-title {

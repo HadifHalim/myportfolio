@@ -38,6 +38,7 @@ myportfolio/
 ├── script.js           # Theme toggle, localStorage logic, menu controls
 └── assets/             # Profile pictures, certificate PDFs, and icons
 
+```
 ---
 
 ### How to add this to your GitHub repo:

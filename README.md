@@ -39,6 +39,7 @@ myportfolio/
 └── assets/             # Profile pictures, certificate PDFs, and icons
 
 ```
+---
 
 * **1. Clone the repository:**
 ```bash
@@ -52,3 +53,15 @@ cd myportfolio
 
 * **3. Open in browser:** Double-click index.html or open it using the Live Server extension in Visual Studio Code.
 
+---
+
+## 👤 About the Author
+
+* **Abdul Hadif bin Abdul Halim**
+* **Role            :** Network Engineering Graduate & Incoming Network Engineer
+* **Certifications  :** CCNP Enterprise, Cisco CyberOps Associate
+* **LinkedIn        :** linkedin.com/in/abdulhadif/
+* **Email           :** hadif9260@gmail.com
+* **GitHub          :** @HadifHalim
+
+⭐ Feel free to star this repository if you find it helpful!

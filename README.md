@@ -39,13 +39,16 @@ myportfolio/
 └── assets/             # Profile pictures, certificate PDFs, and icons
 
 ```
----
 
-### How to add this to your GitHub repo:
-1. Create a file named `README.md` in the root folder of your local project.
-2. Paste the markdown content above into it and save.
-3. Push it to GitHub:
-   ```bash
-   git add README.md
-   git commit -m "Add custom README"
-   git push origin main
+* **1. Clone the repository:**
+```bash
+git clone [https://github.com/HadifHalim/myportfolio.git](https://github.com/HadifHalim/myportfolio.git)
+```
+
+* **2. Navigate to the project directory:**
+```bash
+cd myportfolio
+```
+
+* **3. Open in browser:** Double-click index.html or open it using the Live Server extension in Visual Studio Code.
+

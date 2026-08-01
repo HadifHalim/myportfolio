@@ -99,6 +99,10 @@ nav {
   font-size: 1.5rem;
 }
 
+.nav-links-container {
+  background: white;
+}
+
 a {
   color: var(--text-primary);
   text-decoration: none;
@@ -246,7 +250,14 @@ section {
   display: flex;
   height: 400px;
   width: 400px;
+  flex-shrink: 0; /* Stops Flexbox from squishing the passport photo into a thin strip */
   margin: auto 0;
+}
+
+.section__pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section__text {
@@ -304,9 +315,17 @@ section {
 
 /* Keep photos unaffected by icon color inversion */
 .about-pic,
-.project-img,
+.project-img{
+  width: 100%;
+  height: 220px;          /* Sets a consistent height for all project cards */
+  object-fit: cover;      /* Crops the image cleanly without stretching */
+  border-radius: 0.5rem;
+}
 .section__pic-container img {
-  filter: none !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
 }
 
 /* BUTTONS */
@@ -363,7 +382,10 @@ section {
 }
 
 .about-pic {
-  border-radius: 1rem;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 1.5rem;
   border: 3px solid var(--text-primary);
 }
 
@@ -442,10 +464,13 @@ article .icon {
 
 .color-container {
   border-color: var(--border-color);
-  background: var(--card-bg-alt);
+  background: white;
 }
 
 .project-img {
+  width: 100%;
+  height: 220px;          /* Sets a consistent height for all project cards */
+  object-fit: cover;      /* Crops the image cleanly without stretching */
   border-radius: 0.5rem;
 }
 
@@ -519,4 +544,190 @@ footer p {
 #certificates .details-container {
   text-align: center;
   background: var(--card-bg);
+}
+
+/* Scope strictly to Projects */
+#projects .article-container {
+  display: block;
+  height: 200px; /* Fixed height for all project image headers */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+#projects .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Uniform crop that fills the card banner cleanly */
+  object-position: top center;
+}
+
+/* Scope strictly to Certificates */
+#certificates .article-container {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+#certificates .project-img {
+  width: 100%;
+  height: auto; /* Preserves natural document ratio */
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* --- PROJECTS SECTION IMAGE FIX --- */
+#projects .article-container {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#projects .project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center; /* Pans away from the ceiling to focus on you */
+  border-radius: 0.5rem;
+}
+
+/* --- CERTIFICATES SECTION IMAGE FIX --- */
+#certificates .article-container {
+  display: block;
+  width: 100%;
+}
+
+#certificates .project-img {
+  width: 100%;
+  height: auto;          /* Maintains full document aspect ratio */
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+#about .section__pic-container {
+  width: auto;
+  height: 400px;
+}
+
+#profile .section__pic-container {
+  display: flex;
+}
+
+#profile .section__pic-container img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center; /* Keeps illustration aligned closer to text */
+}
+
+.project-tags {
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem; /* Creates clean breathing room above the buttons */
+  font-size: 0.85rem;
+}
+
+#projects .details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ==========================================
+   DARK MODE OVERRIDES (CARDS & FOOTER NAV)
+   ========================================== */
+
+/* 1. Fix Project & About Cards in Dark Mode */
+body.dark .details-container,
+body.dark-theme .details-container,
+.dark-theme .details-container,
+.dark-mode .details-container {
+  background: #1e293b;             /* Dark blue container background */
+  border: 1px solid #233554;        /* Subtle dark border */
+}
+
+/* 2. Fix Text & Tag Visibility inside Dark Cards */
+body.dark .details-container h2,
+body.dark-theme .details-container h2,
+.dark-theme .details-container h2,
+.dark-mode .details-container h2 {
+  color: #ffffff !important;        /* Pure white for card titles */
+}
+
+body.dark .project-tags,
+body.dark-theme .project-tags,
+.dark-theme .project-tags,
+.dark-mode .project-tags {
+  color: #a8b2d1 !important;        /* Softer slate color for tags */
+}
+
+/* 3. Fix White Box on Footer Navigation Links */
+body.dark footer nav,
+body.dark-theme footer nav,
+.dark-theme footer nav,
+.dark-mode footer nav,
+body.dark footer .nav-links,
+body.dark-theme footer .nav-links,
+.dark-theme footer .nav-links,
+.dark-mode footer .nav-links {
+  background: transparent !important; /* Removes white box background */
+}
+
+body.dark footer .nav-links a,
+body.dark-theme footer .nav-links a,
+.dark-theme footer .nav-links a,
+.dark-mode footer .nav-links a {
+  color: #ccd6f6 !important;        /* Makes footer links visible */
+}
+
+/* --- FIX FOOTER NAV WHITE BOX (DARK MODE) --- */
+footer nav,
+footer .nav-links-container,
+footer .nav-links,
+footer ul,
+footer li {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Ensure footer links are crisp and bright in dark mode */
+body.dark footer a,
+body.dark-theme footer a,
+.dark-theme footer a,
+.dark-mode footer a {
+  color: #ffffff !important;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 2.5rem;              /* Distance from the bottom edge */
+  left: 50%;                   /* Moves arrow to 50% of the screen width */
+  transform: translateX(-50%); /* Perfectly offsets its width to center it */
+  right: auto;                 /* Clears any old right-side alignment */
+}
+
+/* Reduce card inner padding */
+#experience .details-container {
+  padding: 1.25rem 1rem;
+}
+
+/* Reduce gap between individual skill items */
+#experience .article-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Make individual skill boxes slightly thinner */
+#experience article {
+  padding: 0.4rem 0.75rem;
+}
+
+/* Ensure the section has room at the bottom for the arrow */
+#experience {
+  position: relative;
+  min-height: fit-content;
+  padding-bottom: 6rem;
 }
